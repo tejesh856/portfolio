@@ -1,0 +1,72 @@
+.proj-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.proj-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.proj-cover {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #1f2233, #171923);
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+}
+
+.proj-cover img,
+.proj-cover svg {
+  width: 100%;
+  height: 100%;
+}
+
+.proj-cover img {
+  object-fit: cover;
+}
+
+.proj-body {
+  padding: 20px 22px 6px;
+  flex: 1;
+}
+
+.proj-title {
+  font-size: 1.12rem;
+  color: var(--text);
+}
+
+.proj-summary {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.proj-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.proj-open {
+  margin: 18px 22px 20px;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 500;
+  padding: 0;
+}
+
+.proj-open:hover {
+  color: var(--teal);
+}

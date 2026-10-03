@@ -1,0 +1,73 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 11, 16, 0.72);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+  animation: fade 0.15s ease both;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-panel {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  max-width: 560px;
+  width: 100%;
+  padding: 40px 36px 34px;
+  animation: rise 0.2s ease both;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: none;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.modal-close:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.modal-title {
+  margin-top: 8px;
+  font-size: 1.5rem;
+}
+
+.modal-desc {
+  margin-top: 16px;
+  font-size: 0.96rem;
+}
+
+.modal-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}

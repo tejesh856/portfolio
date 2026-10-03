@@ -1,0 +1,107 @@
+:root {
+  --ink: #12131a;
+  --surface: #1b1d28;
+  --surface-raised: #232634;
+  --line: #2b2e3d;
+  --text: #f2efe8;
+  --text-dim: #a7a9bd;
+  --accent: #6c63ff;
+  --accent-soft: #6c63ff22;
+  --teal: #35d0ba;
+  --amber: #f2b94b;
+
+  --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --radius-s: 6px;
+  --radius-m: 14px;
+  --maxw: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  color: var(--text-dim);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.page {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--teal);
+  letter-spacing: 0.04em;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  padding-bottom: 22px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
